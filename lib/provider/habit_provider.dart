@@ -64,6 +64,28 @@ class HabitProvider extends ChangeNotifier {
     }
   }
 
+  /// Add a new habit to the list
+  void addHabit(String title, {IconData icon = Icons.task_alt_rounded}) {
+    if (title.trim().isEmpty) return;
+    _habits.add(
+      Habit(
+        id: DateTime.now().millisecondsSinceEpoch.toString(),
+        title: title.trim(),
+        icon: icon,
+        isCompleted: false,
+      ),
+    );
+    notifyListeners();
+  }
+
+  /// Delete habit by index
+  void deleteHabit(int index) {
+    if (index >= 0 && index < _habits.length) {
+      _habits.removeAt(index);
+      notifyListeners();
+    }
+  }
+
   /// Total count of completed habits
   int get completedCount {
     return _habits.where((habit) => habit.isCompleted).length;
@@ -78,3 +100,4 @@ class HabitProvider extends ChangeNotifier {
     return completedCount / totalCount;
   }
 }
+
