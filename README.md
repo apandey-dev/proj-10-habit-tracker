@@ -9,12 +9,16 @@ Repository URL: https://github.com/apandey-dev/proj-10-habit-tracker
 ### Home Screen Preview
 <img src="assets/home_preview.png" alt="Home Screen Preview" width="300" style="border: 2px solid #cbd5e1; border-radius: 8px; padding: 4px; background-color: #ffffff;" />
 
+### Add Task Preview
+<img src="assets/add_task.png" alt="Add Task Preview" width="300" style="border: 2px solid #cbd5e1; border-radius: 8px; padding: 4px; background-color: #ffffff;" />
+
 ### Complete Task Preview
 <img src="assets/complete_task_preview.png" alt="Complete Task Preview" width="300" style="border: 2px solid #cbd5e1; border-radius: 8px; padding: 4px; background-color: #ffffff;" />
 
 ## Features
 
 - Daily habit creation and progress tracking
+- Interactive task creation with custom habit entry
 - Interactive task completion with instant state updates
 - Global state management using Provider architecture
 - Clean Material 3 design with Google Fonts (Poppins) typography
@@ -54,6 +58,7 @@ Repository URL: https://github.com/apandey-dev/proj-10-habit-tracker
 ```
 proj-10-habit-tracker/
 ├── assets/
+│   ├── add_task.png
 │   ├── complete_task_preview.png
 │   └── home_preview.png
 ├── lib/
